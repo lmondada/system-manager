@@ -1,0 +1,83 @@
+{
+  "nodes": {
+    "nixglhost": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1767635977,
+        "narHash": "sha256-0qFJFJibFlh7r9AHZH4BsYWIK43eGGsIjuQi4R+m+08=",
+        "owner": "lmondada",
+        "repo": "nix-gl-host",
+        "rev": "989c5f9eb3e8b64d3e012256abc10b916f3cc9b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lmondada",
+        "repo": "nix-gl-host",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1669045945,
+        "narHash": "sha256-BQxzijvZpLQ7R+KuQzCPcFgIS6OK0Onb29pYFe2pzJo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6b5019a48f876f3288efc626fa8b70ad0c64eb46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1767116409,
+        "narHash": "sha256-5vKw92l1GyTnjoLzEagJy5V5mDFck72LiQWZSOnSicw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "cad22e7d996aea55ecab064e84834289143e44a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixglhost": "nixglhost",
+        "nixpkgs": "nixpkgs_2",
+        "system-manager": "system-manager"
+      }
+    },
+    "system-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767122467,
+        "narHash": "sha256-0ZraYDfulnl9ASHFK8a346QTomTblVdMbjx+X/jSDYI=",
+        "owner": "numtide",
+        "repo": "system-manager",
+        "rev": "4434112dedfc1fc6b40daecd5554cbfc428b95db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "system-manager",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
