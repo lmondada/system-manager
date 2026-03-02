@@ -74,7 +74,7 @@
     url = "https://github.com/NixOS/nixpkgs/archive/535b720589a07bd9d97c0e982ed94a4fed245d0f.tar.gz";
     sha256 = "sha256:0pfrg7mpj18mmn9vc1va2xibq8bpyl0jqj491pw28ngpn6kxl65j";
   }) { 
-    system = pkgs.system;
+    system = pkgs.stdenv.hostPlatform.system;
   };
 
   # Script to install the policy idempotently

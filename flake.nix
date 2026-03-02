@@ -31,7 +31,16 @@
       systemConfigs.default = system-manager.lib.makeSystemConfig {
         # Specify your system configuration modules here, for example,
         # the path to your system.nix.
-        modules = [ ./systemd-units/jellyfin.nix ./systemd-units/selinux_policy.nix ];
+        modules = [
+          ./systemd-units/jellyfin.nix
+          ./systemd-units/selinux_policy.nix
+          ./systemd-units/immich-docker.nix
+          # Immich photo/video backup stack
+          # ./systemd-units/setup.nix       # oneshot: creates system users + data dirs
+          # ./systemd-units/postgresql.nix  # PostgreSQL 16 + pgvector/vectorchord
+          # ./systemd-units/redis.nix       # Redis (unix socket, no TCP)
+          # ./systemd-units/immich.nix      # immich-server + immich-machine-learning
+        ];
         extraSpecialArgs = {
           inherit wrapNixGl;
         };
